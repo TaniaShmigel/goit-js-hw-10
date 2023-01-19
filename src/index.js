@@ -26,10 +26,11 @@ function onInput(e) {
   fetchCountries.name = country;
   fetchCountries.fetch().then(data => {
     arrayCheckLength(data);
+    console.log(data)
     return data;
   });
 
-  // console.log(fetchCountries)
+  
 }
 
 function arrayCheckLength(array) {
@@ -76,7 +77,7 @@ function createCard(array) {
  )}</p></div>`
     )
     .join('');
-  refs.countryInfo.insertAdjacentHTML('beforeend', markupCard);
+  refs.coutryList.insertAdjacentHTML('beforeend', markupCard);
 }
 
 function createList(array) {
@@ -91,7 +92,7 @@ function createList(array) {
      </li>  `
     )
     .join('');
-  refs.countryInfo.insertAdjacentHTML('beforeend', markupList);
+  refs.coutryList.insertAdjacentHTML('beforeend', markupList);
 }
 
 function clearCountryList() {

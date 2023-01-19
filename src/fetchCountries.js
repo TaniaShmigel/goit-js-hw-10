@@ -8,9 +8,9 @@ export default class FetchCountrise {
       `https://restcountries.com/v3.1/name/${this.nameCountry}?fields=name,capital,population,flags,languages`
     )
       .then(response => response.json())
-      .then(data => {
-        return data;
-      })
+      // .then(data => {
+      //   return data;
+      // })
       .catch(error => {
         return error;
       });
